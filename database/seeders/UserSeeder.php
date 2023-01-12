@@ -20,7 +20,7 @@ class UserSeeder extends Seeder
             "lastname" => "",
             "email" => "admin@admin.com",
             "password" => Hash::make("password"),
-            "company" => 1,
+//            "company" => 1,
             "role" => "admin",
         ]);
     }

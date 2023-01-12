@@ -72,9 +72,17 @@
                                             <form class="inline" action="{{ route('users.destroy', $user->id) }}"
                                                 method="post">
                                                 <button type="submit"
-                                                    class="font-medium text-red-600 hover:text-red-900 ml-2">Delete</button>
+                                                    class="font-medium text-red-600 hover:text-red-900 mr-2 ml-2">Delete</button>
                                                 @method('delete')
                                             </form>
+                                                |
+                                            @if($user->status)
+                                                    <button type="submit"
+                                                            class="font-medium text-success-600 hover:text-indigo-900 ml-2">Approved</button>
+                                                @else
+                                                    <a href="{{ route('users.approve', $user) }}"
+                                                       class="text-indigo-600 hover:text-indigo-900 ml-2">Approve</a>
+                                                @endif
                                             @endcan
                                         </td>
                                     </tr>

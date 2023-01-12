@@ -24,14 +24,14 @@ class User extends Authenticatable
      *
      * @var string[]
      */
-    protected $fillable = [
-        "firstname",
-        "lastname",
-        "email",
-        "password",
-        "company",
-        "role",
-    ];
+//    protected $fillable = [
+//        "firstname",
+//        "lastname",
+//        "email",
+//        "password",
+//        "company",
+//        "role",
+//    ];
 
     /**
      * The attributes that should be hidden for serialization.
@@ -44,6 +44,8 @@ class User extends Authenticatable
         "two_factor_secret",
         "two_factor_recovery_codes",
     ];
+
+    protected $guarded = [];
 
     /**
      * The attributes that should be cast.
@@ -59,8 +61,8 @@ class User extends Authenticatable
      *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function company()
-    {
-        return $this->belongsTo(Company::class, "company");
-    }
+//    public function company()
+//    {
+//        return $this->belongsTo(Company::class, "company");
+//    }
 }
